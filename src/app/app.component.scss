@@ -1,0 +1,52 @@
+.app {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__header-name {
+        padding: 0 4px;
+    }
+
+    &__name {
+        font-weight: bold;
+        margin: 0;
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+
+        &_column {
+            flex-direction: column;
+        }
+    }
+
+    &__image {
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+        border: 1px solid #a3a3a3;
+        border-radius: 50%;
+        padding: 8px;
+        margin: 24px;
+
+        &_column {
+            height: 80px;
+            width: 80px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: flex-start;
+
+        &_column {
+            align-items: center;
+        }
+    }
+}

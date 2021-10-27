@@ -1,0 +1,12 @@
+<div class="card__container">
+    <div class="card__header">
+        <ng-container
+            [ngTemplateOutlet]="headerTemplateRef"
+            [ngTemplateOutletContext]="{ $implicit: name }"
+        ></ng-container>
+    </div>
+    <ng-container
+        [ngTemplateOutlet]="optionTemplate"
+        [ngTemplateOutletContext]="{ $implicit: name, image: imageUrl, age: personAge, role: profession }"
+    ></ng-container>
+</div>

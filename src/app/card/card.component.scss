@@ -1,0 +1,15 @@
+.card {
+    &__container {
+        margin-top: 20px;
+        width: 500px;
+        border: 1px solid #a3a3a3;
+        border-radius: 4px;
+    }
+
+    &__header {
+        background-color: #7fff0057;
+        padding: 12px;
+        display: flex;
+        justify-content: center;
+    }
+}
