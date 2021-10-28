@@ -15,12 +15,7 @@ export class CardComponent {
   @ContentChild('headerTemplate')
   headerTemplateRef!: TemplateRef<any>;
 
-  constructor() {
-    // console.log(this);
-  }
-
   get personAge(): string {
-    console.log(this);
     return `${this.age} years old`;
   }
 }
