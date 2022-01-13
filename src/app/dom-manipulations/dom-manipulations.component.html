@@ -1,0 +1,32 @@
+<div class="dom-manipulations__container">
+  <h2>{{ title }}</h2>
+</div>
+<ng-template
+  #personTemplate
+  let-name
+  let-image="image"
+  let-age="age"
+  let-role="role"
+>
+  <div class="dom-manipulations__body dom-manipulations__body_column">
+    <img
+      class="dom-manipulations__image dom-manipulations__image_column"
+      [src]="image"
+      alt="photo"
+    />
+    <div class="dom-manipulations__info dom-manipulations__info_column">
+      <p class="dom-manipulations__name">{{ name }}</p>
+      <p>{{ role }}</p>
+      <p>{{ age }}</p>
+    </div>
+  </div>
+</ng-template>
+
+<button (click)="clearAllBelow()">Clear all below</button>
+<button (click)="addCourteneyCox()">Add Courteney Cox</button>
+<button (click)="addMattPerry()">Add Matthew Perry</button>
+<button (click)="addLisaKudrow()">Add Lisa Kudrow</button>
+<button (click)="addMattLeBlanc()">Add Matt LeBlanc</button>
+
+<ng-container #insertViewViaTemplate></ng-container>
+<ng-container #insertView></ng-container>

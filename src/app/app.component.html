@@ -1,48 +1,61 @@
 <div class="app__container">
-    <h2>{{ title }}</h2>
+  <h2>{{ title }}</h2>
 
-    <app-card
-        [name]="'Jennifer Aniston'"
-        [imageUrl]="jenniferAniston"
-        [age]="52"
-        [profession]="'Actress'"
-        [optionTemplate]="actressTemplate"
-    >
-        <ng-template #headerTemplate let-name>
-            Welcome, <span class="app__header-name app__name">{{ name }}!</span>
-        </ng-template>
-    </app-card>
-    <app-card
-        [name]="'David Schwimmer'"
-        [imageUrl]="davidSchwimmer"
-        [age]="54"
-        [profession]="'Actor'"
-        [optionTemplate]="actorTemplate"
-    >
-        <ng-template #headerTemplate let-name>
-            Hi, <span class="app__header-name app__name">{{ name }}!</span> What's up?
-        </ng-template>
-    </app-card>
+  <app-card
+    [name]="'Jennifer Aniston'"
+    [imageUrl]="jenniferAniston"
+    [age]="52"
+    [profession]="'Actress'"
+    [optionTemplate]="actressTemplate"
+  >
+    <ng-template #headerTemplate let-name>
+      Welcome, <span class="app__header-name app__name">{{ name }}!</span>
+    </ng-template>
+  </app-card>
+  <app-card
+    [name]="'David Schwimmer'"
+    [imageUrl]="davidSchwimmer"
+    [age]="54"
+    [profession]="'Actor'"
+    [optionTemplate]="actorTemplate"
+  >
+    <ng-template #headerTemplate let-name>
+      Hi, <span class="app__header-name app__name">{{ name }}!</span> What's up?
+    </ng-template>
+  </app-card>
+  <dom-manipulations></dom-manipulations>
 </div>
 
-<ng-template #actressTemplate let-name let-image="image" let-age="age" let-role="role">
-    <div class="app__body app__body_row">
-        <img class="app__image" [src]="image" alt="photo" />
-        <div class="app__info">
-            <p class="app__name">{{ name }}</p>
-            <p>{{ age }}</p>
-            <p>{{ role }}</p>
-        </div>
+<ng-template
+  #actressTemplate
+  let-name
+  let-image="image"
+  let-age="age"
+  let-role="role"
+>
+  <div class="app__body app__body_row">
+    <img class="app__image" [src]="image" alt="photo" />
+    <div class="app__info">
+      <p class="app__name">{{ name }}</p>
+      <p>{{ age }}</p>
+      <p>{{ role }}</p>
     </div>
+  </div>
 </ng-template>
 
-<ng-template #actorTemplate let-name let-image="image" let-age="age" let-role="role">
-    <div class="app__body app__body_column">
-        <img class="app__image app__image_column" [src]="image" alt="photo" />
-        <div class="app__info app__info_column">
-            <p class="app__name">{{ name }}</p>
-            <p>{{ role }}</p>
-            <p>{{ age }}</p>
-        </div>
+<ng-template
+  #actorTemplate
+  let-name
+  let-image="image"
+  let-age="age"
+  let-role="role"
+>
+  <div class="app__body app__body_column">
+    <img class="app__image app__image_column" [src]="image" alt="photo" />
+    <div class="app__info app__info_column">
+      <p class="app__name">{{ name }}</p>
+      <p>{{ role }}</p>
+      <p>{{ age }}</p>
     </div>
+  </div>
 </ng-template>

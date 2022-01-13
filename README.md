@@ -1,4 +1,4 @@
-# AngularTemplateOutletExample
+# Angular TemplateOutlet Example
 
 ## Development server
 
